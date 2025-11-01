@@ -274,3 +274,44 @@ body{
   }
 }
 
+/* Redes sociales elegantes */
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Instagram */
+.social-btn.instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+  background-size: 200% 200%;
+}
+.social-btn.instagram:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(221,42,123,0.3);
+  background-position: right center;
+}
+
+/* Facebook */
+.social-btn.facebook {
+  background: #1877F2;
+}
+.social-btn.facebook:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(24,119,242,0.3);
+}
+
