@@ -148,60 +148,40 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <h2 class="section-title">Contacto</h2>
-          <p class="section-sub">Información y horarios.</p>
+    <section id="contacto" class="section section-alt">
+  <div class="container contact-wrapper">
+    <div class="contact-content">
+      <h2 class="section-title">¿Quieres agendar con nosotros?</h2>
+      <p class="section-sub">Con un solo clic puedes hablar directamente con nuestro equipo 💆‍♀️</p>
 
-          <ul class="info-list">
-            <li><strong>Dirección:</strong> Avenida Principal #123, Ciudad</li>
-            <li><strong>Teléfono / WhatsApp:</strong> +506 6000 0000</li>
-            <li><strong>Horario:</strong> Lun - Vie 9:00 - 19:00 · Sáb 9:00 - 14:00</li>
-          </ul>
+      <a 
+        href="https://api.whatsapp.com/send?phone=50688373633&text=¡Hola!%20Quiero%20agendar%20una%20cita%20con%20ByN%20Harmony%20Spa.%20✨" 
+        class="btn btn-primary whatsapp-btn" 
+        target="_blank" 
+        aria-label="Agendar por WhatsApp">
+        Agendar por WhatsApp
+      </a>
 
-          <div class="socials">
-            <a href="https://api.whatsapp.com/send?phone=50688373633" aria-label="Instagram">Instagram</a>
-            <a href="https://www.facebook.com/ByNHarmonySpa" aria-label="Facebook">Facebook</a>
-          </div>
-        </div>
+      <ul class="info-list">
+        <li><strong>📍 Dirección:</strong> Avenida Principal #123, Ciudad</li>
+        <li><strong>📞 Teléfono / WhatsApp:</strong> +506 6000 0000</li>
+        <li><strong>🕓 Horario:</strong> Lun - Vie 9:00 - 19:00 · Sáb 9:00 - 14:00</li>
+      </ul>
 
-        <div class="contact-form">
-    <h3>Agendar una cita</h3>
-  <form id="citaForm" onsubmit="return false;">
-    <label>
-      Nombre completo
-      <input type="text" id="nombre" placeholder="Tu nombre" required>
-    </label>
-
-    <label>
-      Número de teléfono
-      <input type="tel" id="telefono" placeholder="Ej: 8888-8888" required pattern="[0-9]{8}">
-    </label>
-
-    <label>
-      Fecha
-      <input type="date" id="fecha" required>
-    </label>
-
-    <label>
-      Hora
-      <select id="hora" required></select>
-    </label>
-
-    <p class="note">* Solo se permiten citas dentro del próximo año.<br>* Horario: Lun–Sáb 9:30–19:00, Dom 10:30–16:00.</p>
-
-    <div class="form-actions">
-      <button class="btn btn-secondary" type="reset">Limpiar</button>
-      <button class="btn btn-primary" type="button" id="agendarBtn">Agendar cita</button>
+      <div class="socials">
+        <a href="https://www.instagram.com/ByNHarmonySpa" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/ByNHarmonySpa" target="_blank" aria-label="Facebook">Facebook</a>
+      </div>
     </div>
 
-    <p id="mensaje" style="font-weight:bold; margin-top:8px;"></p>
-  </form>
-</div>
-
-      </div>
-    </section>
+    <div class="contact-visual">
+      <div class="bubble b1"></div>
+      <div class="bubble b2"></div>
+      <div class="bubble b3"></div>
+      <img src="img/spa-relax.jpg" alt="Ambiente relajante del spa" class="contact-image">
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="site-footer">
