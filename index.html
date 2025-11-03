@@ -5,11 +5,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BYN Harmony Spa</title>
 
-  <!-- Tipografía: sistema + una elegante -->
+  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Alinear los dos botones lado a lado */
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Asegurar mismo estilo */
+    .btn.btn-primary.whatsapp {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn.btn-primary.whatsapp:hover {
+      background-color: #333;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -36,22 +55,28 @@
         <div class="hero-text">
           <h1>BYN Harmony Spa</h1>
           <p class="tagline">Armonía en cada detalle — Todo en cabello y uñas</p>
-          <p class="lead">"Servicios de estetica y cuidado personal". desde cabello, peinados, tratamientos faciales y corporales, manicura, pedicura, masajes, depilaciones y otros
-tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los clientes a través de diversos servicios de belleza y relajación.</p>
-          <a class="btn btn-primary" href="#servicios">Ver servicios</a>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="container contact-wrapper">
-            <a class="btn btn-primary" href="#servicios">Quieres contactar con nosotros?</a>
+          <p class="lead">
+            "Servicios de estética y cuidado personal". Desde cabello, peinados, tratamientos faciales y corporales, manicura, pedicura, masajes, depilaciones y otros tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los clientes a través de diversos servicios de belleza y relajación.
+          </p>
+          
+          <div class="btn-group">
+            <a class="btn btn-primary" href="#servicios">Ver servicios</a>
+            <a class="btn btn-primary whatsapp" 
+               href="https://api.whatsapp.com/send?phone=50688373633&text=¡Hola!%20Quiero%20agendar%20una%20cita%20con%20ByN%20Harmony%20Spa.%20✨"
+               target="_blank" 
+               aria-label="Agendar por WhatsApp">
+              ¿Quieres agendar con nosotros?
+            </a>
           </div>
-          <div class="hero-visual" aria-hidden="true">
-            <div class="container contact-wrapper">
-              <!-- Lugar para ilustración / imagen decorativa -->
-              <div class="illus">
-                <div class="bubble b1"></div>
-                <div class="bubble b2"></div>
-                <div class="bubble b3"></div>
-              </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Imagen decorativa / burbujas -->
+          <div class="container contact-wrapper">
+            <div class="illus">
+              <div class="bubble b1"></div>
+              <div class="bubble b2"></div>
+              <div class="bubble b3"></div>
             </div>
           </div>
         </div>
@@ -82,7 +107,7 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
             <p>Baby Light, microlight</p>
             <p>Enzimoterapia y Bioplastia</p>
             <p>Botox Capilar</p>
-            <p>Tratamientos de Hidratantes</p>
+            <p>Tratamientos Hidratantes</p>
           </article>
           <article class="card">
             <h3>SPA</h3>
@@ -96,56 +121,12 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
           <article class="card">
             <h3>PESTAÑAS Y CEJAS</h3>
             <p>Laminado de cejas</p>
-            <p>Depilacion con cera</p>
+            <p>Depilación con cera</p>
             <p>Extensión de pestañas</p>
             <p>Diseño de cejas con henna</p>
             <p>Lifting y tinte de pestañas</p>
-            <p>Maquillaje para toda la ocasión</p>
+            <p>Maquillaje para toda ocasión</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALERÍA -->
-    <section id="galeria" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Galería</h2>
-        <p class="section-sub">Algunas transformaciones y detalles.</p>
-
-        <div class="gallery" id="gallery">
-          <!-- Reemplazar src con imágenes reales -->
-          <figure class="gallery-item"><img src="images/Uñas 1.jpg" alt="Look 1"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 2.jpg" alt="Look 2"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 3.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 4.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 5.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 6.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 7.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 8.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 10.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 11.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 12.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 13.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 14.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 15.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 16.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 17.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 1.jpg" alt="Look 1"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 2.jpg" alt="Look 2"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 3.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 5.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 6.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 7.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 8.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 9.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 10.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 11.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 12.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 13.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 14.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 15.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 16.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 17.jpeg" alt="Look 3"></figure>
         </div>
       </div>
     </section>
@@ -156,9 +137,11 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
         <div class="contact-content">
           <h2 class="section-title">¿Quieres agendar con nosotros?</h2>
           <p class="section-sub">Con un solo clic puedes hablar directamente con nuestro equipo 💆‍♀️</p>
-          <a href="https://api.whatsapp.com/send?phone=50688373633&text=¡Hola!%20Quiero%20agendar%20una%20cita%20con%20ByN%20Harmony%20Spa.%20✨" class="btn btn-primary whatsapp-btn" target="_blank" aria-label="Agendar por WhatsApp">
+          <a href="https://api.whatsapp.com/send?phone=50688373633&text=¡Hola!%20Quiero%20agendar%20una%20cita%20con%20ByN%20Harmony%20Spa.%20✨"
+             class="btn btn-primary whatsapp-btn" target="_blank" aria-label="Agendar por WhatsApp">
             Agendar por WhatsApp
           </a>
+
           <ul class="info-list">
             <li><strong>📍 Dirección:</strong> Avenida Principal #123, Ciudad</li>
             <li><strong>📞 Teléfono / WhatsApp:</strong> +506 6000 0000</li>
@@ -167,15 +150,9 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
 
           <div class="socials">
             <a href="https://www.instagram.com/byn_harmonyspa" target="_blank" class="social-btn instagram" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zm4.75-.75a.75.75 0 1 1 0 1.5a.75.75 0 0 1 0-1.5z"/>
-              </svg>
               Instagram
             </a>
             <a href="https://www.facebook.com/ByNHarmonySpa" target="_blank" class="social-btn facebook" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.6V12h2.6V9.8c0-2.57 1.54-3.99 3.9-3.99c1.13 0 2.31.2 2.31.2v2.54h-1.3c-1.28 0-1.68.8-1.68 1.62V12h2.85l-.46 2.88h-2.39v6.99A10.02 10.02 0 0 0 22 12z"/>
-              </svg>
               Facebook
             </a>
           </div>
@@ -193,7 +170,6 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
   <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
