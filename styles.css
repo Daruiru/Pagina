@@ -315,3 +315,38 @@ body{
   box-shadow: 0 10px 28px rgba(24,119,242,0.3);
 }
 
+/* Ajuste del header y navegación */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Botón de WhatsApp en el menú */
+.agendar-btn {
+  background-color: #25d366; /* verde WhatsApp */
+  color: #fff !important;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.agendar-btn:hover {
+  background-color: #1ebe5d;
+}
+
