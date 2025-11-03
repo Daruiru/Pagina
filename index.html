@@ -13,21 +13,32 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="brand">
-        <img src="images/Logo.jpeg" alt="Logo BYN Harmony Spa" class="logo">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand">
+      <img src="images/Logo.jpeg" alt="Logo BYN Harmony Spa" class="logo">
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+
+      <!-- 🔹 Botón nuevo al lado de "Servicios" -->
+      <a 
+        href="https://api.whatsapp.com/send?phone=50688373633&text=¡Hola!%20Quiero%20agendar%20una%20cita%20con%20ByN%20Harmony%20Spa.%20✨"
+        target="_blank"
+        class="btn btn-primary agendar-btn"
+        aria-label="Agendar por WhatsApp">
+        ¿Quieres agendar con nosotros?
       </a>
 
-      <nav class="nav" id="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-      <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
-    </div>
-  </header>
+    <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
 
   <main>
     <!-- HERO / INICIO -->
@@ -204,6 +215,7 @@ tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los cl
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
