@@ -421,6 +421,30 @@ body{
 }
 
 /* Animaciones de carrusel */
+.gallery-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 10px;
+  animation: scroll-left 60s linear infinite;
+}
+
+#gallery-unas {
+  animation: scroll-right 60s linear infinite;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Animaciones de carrusel */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -431,7 +455,6 @@ body{
   100% { transform: translateX(50%); }
 }
 
-}
 
 
 
