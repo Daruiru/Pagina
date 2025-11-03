@@ -350,7 +350,7 @@ body{
   background-color: #1ebe5d;
 }
 
---editar esto mas tarde lol--
+/* editar esto mas tarde lol */
 /* --- ESTILO MODERNO PARA SERVICIOS --- */
 
 .section#servicios {
@@ -419,3 +419,4 @@ body{
     grid-template-columns: 1fr;
   }
 }
+
