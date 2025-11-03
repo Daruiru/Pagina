@@ -423,17 +423,16 @@ body{
 }
 
 .gallery-item img {
-  width: calc(15vw + 50px); /* tamaño adaptable según pantalla */
-  max-width: 200px;
-  height: auto;
+  width: 180px; /* tamaño fijo */
+  aspect-ratio: 1 / 1; /* cuadrado perfecto */
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: cover; /* recorta la imagen para llenar el cuadrado */
 }
 
 /* Animaciones */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* ajustar según duplicados */
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes scroll-right {
@@ -445,17 +444,14 @@ body{
 @media (max-width: 768px) {
   .gallery-item img {
     width: 120px;
-    max-width: 140px;
   }
 }
 
 @media (min-width: 1200px) {
   .gallery-item img {
-    width: 180px;
-    max-width: 220px;
+    width: 220px;
   }
 }
-
 
 
 
