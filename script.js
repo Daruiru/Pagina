@@ -212,5 +212,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderMonth();
   }
+
+  // ======== GALERÍA: Ver más / Ver menos ========
+  const gallery = document.querySelector('.gallery');
+  if (gallery) {
+    const images = gallery.querySelectorAll('figure');
+    const maxVisible = 4;
+    let isExpanded = false;
+
+    // Crear el botón "Ver más"
+    const viewMoreBtn = document.createElement('button');
+    viewMoreBtn.textContent = 'Ver más';
+    viewMoreBtn.classList.add('view-more-btn');
+    gallery.after(viewMoreBtn);
+
+    // Función para actualizar la galería
+    function updateGallery() {
+      images.forEach((img, index) => {
+        img.style.display = (isExpanded || index < maxVisible) ? 'block' : 'none';
+      });
+      viewMoreBtn.textContent = isExpanded ? 'Ver menos' : 'Ver más';
+    }
+
+    viewMoreBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      updateGallery();
+    });
+
+    updateGallery();
+  }
 });
+
+
 
