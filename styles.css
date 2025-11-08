@@ -453,11 +453,11 @@ body{
   gap: 20px;
   white-space: nowrap;
   overflow: hidden;
-  animation: scroll-left 120s linear infinite;
+  animation: scroll-left 60s linear infinite;
 }
 
 #gallery-unas {
-  animation: scroll-right 120s linear infinite;
+  animation: scroll-right 60s linear infinite;
 }
 
 .gallery-item {
@@ -512,6 +512,7 @@ body{
   background-color: #222;
   transform: translateY(-2px);
 }
+
 
 
 
