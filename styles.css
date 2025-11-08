@@ -481,6 +481,51 @@ body {
   transform: translateY(-2px);
 }
 
+/* === GALERÍA EN CUADRÍCULA === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en PC */
+  gap: 20px; /* espacio entre fotos */
+  justify-items: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.gallery-grid .gallery-item {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid .gallery-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: tablets */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: móviles */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
 
 
 
