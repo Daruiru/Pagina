@@ -495,6 +495,24 @@ body{
   }
 }
 
+.view-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 26px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 9999px; /* forma de pastilla */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
 
 
 
