@@ -28,8 +28,47 @@
     .btn.btn-primary.whatsapp:hover {
       background-color: #333;
     }
+
+    /* GALERÍA - animación y control */
+    #verMasBtn {
+      display: inline-block;
+      margin: 1.5rem auto 0;
+      padding: 0.8rem 1.4rem;
+      background-color: #000;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #verMasBtn:hover {
+      background-color: #333;
+      transform: translateY(-2px);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery-item {
+      opacity: 0;
+      transform: scale(0.98);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: none;
+    }
+
+    .gallery-item.visible {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+    }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -49,16 +88,16 @@
   </header>
 
   <main>
-    <!-- HERO / INICIO -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
           <h1>BYN Harmony Spa</h1>
           <p class="tagline">Armonía en cada detalle — Todo en cabello y uñas</p>
           <p class="lead">
-            "Servicios de estética y cuidado personal". Desde cabello, peinados, tratamientos faciales y corporales, manicura, pedicura, masajes, depilaciones y otros tratamientos afines, enfocados en mejorar la apariencia y el bienestar de los clientes a través de diversos servicios de belleza y relajación.
+            Servicios de estética y cuidado personal enfocados en el bienestar y la belleza.  
+            Especialistas en cabello, peinados, manicura, pedicura y tratamientos capilares.
           </p>
-          
           <div class="btn-group">
             <a class="btn btn-primary" href="#servicios">Ver servicios</a>
             <a class="btn btn-primary whatsapp" 
@@ -71,13 +110,10 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <!-- Imagen decorativa / burbujas -->
-          <div class="container contact-wrapper">
-            <div class="illus">
-              <div class="bubble b1"></div>
-              <div class="bubble b2"></div>
-              <div class="bubble b3"></div>
-            </div>
+          <div class="illus">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
           </div>
         </div>
       </div>
@@ -88,6 +124,7 @@
       <div class="container">
         <h2 class="section-title">Servicios</h2>
         <p class="section-sub">Tratamientos profesionales para cabello y uñas con atención personalizada.</p>
+
         <div class="cards">
           <article class="card">
             <h3>UÑAS</h3>
@@ -99,6 +136,7 @@
             <p>Protección en uña natural</p>
             <p>Sistema Dual</p>
           </article>
+
           <article class="card">
             <h3>CABELLO</h3>
             <p>Corte</p>
@@ -109,135 +147,63 @@
             <p>Botox Capilar</p>
             <p>Tratamientos Hidratantes</p>
           </article>
-          <article class="card">
-            <h3>SPA</h3>
-            <p>Masaje Relajante</p>
-            <p>Masaje Descontracturante</p>
-            <p>Masaje Sueco</p>
-            <p>Masaje Reductivo</p>
-            <p>Masaje Facial</p>
-            <p>Limpieza Facial Profunda</p>
-          </article>
-          <article class="card">
-            <h3>PESTAÑAS Y CEJAS</h3>
-            <p>Laminado de cejas</p>
-            <p>Depilación con cera</p>
-            <p>Extensión de pestañas</p>
-            <p>Diseño de cejas con henna</p>
-            <p>Lifting y tinte de pestañas</p>
-            <p>Maquillaje para toda ocasión</p>
-          </article>
         </div>
       </div>
     </section>
+
     <!-- GALERÍA -->
-    <div class="gallery-wrapper">
-  <div class="gallery-row" id="gallery-pelo">
-    <figure class="gallery-item"><img src="images/Pelo 1.jpg" alt="Look 1"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 2.jpg" alt="Look 2"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 3.jpg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 5.jpg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 6.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 7.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 8.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 9.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 10.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 11.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 12.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 13.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 14.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 15.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 16.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Pelo 17.jpeg" alt="Look 3"></figure>
-    <!-- resto de pelo -->
-  </div>
-    <div class="gallery-row" id="gallery-unas">
-    <figure class="gallery-item"><img src="images/Uñas 1.jpg" alt="Look 1"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 2.jpg" alt="Look 2"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 3.jpg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 4.jpg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 5.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 6.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 7.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 8.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 10.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 11.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 12.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 13.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 14.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 15.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 16.jpeg" alt="Look 3"></figure>
-    <figure class="gallery-item"><img src="images/Uñas 17.jpeg" alt="Look 3"></figure> 
-    <!-- resto de uñas -->
-  </div>
-</div>
     <section id="galeria" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Galería</h2>
-        <p class="section-sub">Algunas transformaciones y detalles.</p>
+        <p class="section-sub">Algunas transformaciones y detalles de nuestro trabajo.</p>
 
         <div class="gallery-grid" id="gallery">
+          <!-- UÑAS -->
+          <figure class="gallery-item"><img src="images/Uñas 1.jpg" alt="Diseño de uñas 1"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 2.jpg" alt="Diseño de uñas 2"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 3.jpg" alt="Diseño de uñas 3"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 4.jpg" alt="Diseño de uñas 4"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 5.jpeg" alt="Diseño de uñas 5"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 6.jpeg" alt="Diseño de uñas 6"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 7.jpeg" alt="Diseño de uñas 7"></figure>
+          <figure class="gallery-item"><img src="images/Uñas 8.jpeg" alt="Diseño de uñas 8"></figure>
 
-          <!-- Reemplazar src con imágenes reales -->
-          <figure class="gallery-item"><img src="images/Uñas 1.jpg" alt="Look 1"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 2.jpg" alt="Look 2"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 3.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 4.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 5.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 6.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 7.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 8.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 10.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 11.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 12.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 13.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 14.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 15.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 16.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 17.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 1.jpg" alt="Look 1"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 2.jpg" alt="Look 2"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 3.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 5.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 6.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 7.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 8.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 9.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 10.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 11.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 12.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 13.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 14.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 15.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 16.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 17.jpeg" alt="Look 3"></figure>
+          <!-- CABELLO -->
+          <figure class="gallery-item"><img src="images/Pelo 1.jpg" alt="Peinado 1"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 2.jpg" alt="Peinado 2"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 3.jpg" alt="Peinado 3"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 5.jpg" alt="Peinado 4"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 6.jpeg" alt="Peinado 5"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 7.jpeg" alt="Peinado 6"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 8.jpeg" alt="Peinado 7"></figure>
+          <figure class="gallery-item"><img src="images/Pelo 9.jpeg" alt="Peinado 8"></figure>
         </div>
+
+        <button id="verMasBtn">Ver más</button>
       </div>
     </section>
+
     <!-- CONTACTO -->
     <section id="contacto" class="section section-alt">
       <div class="container contact-wrapper">
         <div class="contact-content">
           <h2 class="section-title">¿Quieres agendar con nosotros?</h2>
           <p class="section-sub">Con un solo clic puedes hablar directamente con nuestro equipo 💆‍♀️</p>
+
           <a href="https://api.whatsapp.com/send?phone=50688373633&text=¡Hola!%20Quiero%20agendar%20una%20cita%20con%20ByN%20Harmony%20Spa.%20✨"
-             class="btn btn-primary whatsapp-btn" target="_blank" aria-label="Agendar por WhatsApp">
+             class="btn btn-primary whatsapp-btn" target="_blank">
             Agendar por WhatsApp
           </a>
 
           <ul class="info-list">
             <li><strong>📍 Dirección:</strong> Avenida Principal #123, Ciudad</li>
-            <li><strong>📞 Teléfono / WhatsApp:</strong> +506 6000 0000</li>
+            <li><strong>📞 Teléfono / WhatsApp:</strong> +506 8837 3633</li>
             <li><strong>🕓 Horario:</strong> Lun - Vie 9:00 - 19:00 · Sáb 9:00 - 14:00</li>
           </ul>
 
           <div class="socials">
-            <a href="https://www.instagram.com/byn_harmonyspa" target="_blank" class="social-btn instagram" aria-label="Instagram">
-              Instagram
-            </a>
-            <a href="https://www.facebook.com/ByNHarmonySpa" target="_blank" class="social-btn facebook" aria-label="Facebook">
-              Facebook
-            </a>
+            <a href="https://www.instagram.com/byn_harmonyspa" target="_blank" class="social-btn instagram">Instagram</a>
+            <a href="https://www.facebook.com/ByNHarmonySpa" target="_blank" class="social-btn facebook">Facebook</a>
           </div>
         </div>
       </div>
@@ -250,9 +216,46 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".gallery-item");
+      const btn = document.querySelector("#verMasBtn");
+      const visibleCount = 6; // cantidad inicial visible
+      let expanded = false;
+
+      // Mostrar las primeras 6 con animación
+      items.forEach((item, i) => {
+        if (i < visibleCount) {
+          setTimeout(() => item.classList.add("visible"), i * 60);
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        expanded = !expanded;
+        if (expanded) {
+          items.forEach((item, i) => {
+            setTimeout(() => item.classList.add("visible"), i * 50);
+          });
+          btn.textContent = "Ver menos";
+        } else {
+          items.forEach((item, i) => {
+            if (i >= visibleCount) {
+              item.classList.remove("visible");
+              setTimeout(() => (item.style.display = "none"), 300);
+            }
+          });
+          btn.textContent = "Ver más";
+        }
+      });
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
 
 
