@@ -55,14 +55,15 @@ body {
 .brand { display: flex; align-items: center; text-decoration: none }
 
 .logo {
-  height: 64px;
-  width: 64px;
-  object-fit: cover;
-  border-radius: 0;    
-  border: 3px solid var(--fg);
-  background: var(--accent);
-  padding: 6px;
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  border: none;
 }
+
 
 /* NAV */
 .nav {
@@ -524,6 +525,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 
 
 
