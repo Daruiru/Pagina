@@ -58,7 +58,7 @@ body {
   height: 64px;
   width: 64px;
   object-fit: cover;
-  border-radius: 999px;
+  border-radius: 0;    
   border: 3px solid var(--fg);
   background: var(--accent);
   padding: 6px;
@@ -524,6 +524,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 
 
 
