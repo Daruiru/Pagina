@@ -35,14 +35,12 @@ body {
   padding: 1rem;
 }
 
-/* HEADER */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 80;
-  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(10,10,10,0.04);
+  background-color: #ff5aa3; /* Cambialo por el color que querás */
+  border-bottom: 1px solid rgba(10,10,10,0.1);
 }
 
 .header-inner {
@@ -525,6 +523,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 
 
 
