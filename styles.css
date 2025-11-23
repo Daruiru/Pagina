@@ -388,7 +388,7 @@ body {
 /* --- Servicios tipo botón Instagram --- */
 #servicios .card p {
   display: inline-block;
-  background: linear-gradient(45deg, #FF00FF, #0a0a0a, #0a0a0a, #FF00FF);
+  background: linear-gradient(45deg, #ff5aa3, #0a0a0a, #0a0a0a, #ff5aa3);
   background-size: 200% 200%;
   color: #fff;
   font-weight: 500;
@@ -524,6 +524,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 
 
 
