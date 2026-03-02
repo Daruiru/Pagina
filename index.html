@@ -171,86 +171,92 @@
     <!-- resto de uñas -->
   </div>
 </div>
-        <section id="galeria" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Galería</h2>
-        <p class="section-sub">Algunas transformaciones y detalles.</p>
+      <!-- GALERÍA POR CATEGORÍAS -->
+<section id="galeria" class="section">
+  <div class="container">
+    <h2 class="section-title">Galería</h2>
+    <p class="section-sub">Explora nuestros trabajos por categoría</p>
 
-        <div class="gallery-grid" id="gallery">
-          <!-- Reemplazar src con imágenes reales -->
-          <figure class="gallery-item"><img src="images/Uñas 1.jpg" alt="Look 1"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 2.jpg" alt="Look 2"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 3.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 4.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 5.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 6.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 7.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 8.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 10.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 11.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 12.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 13.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 14.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 15.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 16.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Uñas 17.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 1.jpg" alt="Look 1"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 2.jpg" alt="Look 2"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 3.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 5.jpg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 6.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 7.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 8.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 9.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 10.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 11.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 12.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 13.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 14.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 15.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 16.jpeg" alt="Look 3"></figure>
-          <figure class="gallery-item"><img src="images/Pelo 17.jpeg" alt="Look 3"></figure>
-        </div>
-
-        <!-- Botón de ver más -->
-        <div class="ver-mas-wrapper">
-          <button id="verMasBtn" class="btn btn-primary">Ver más</button>
-        </div>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const gallery = document.getElementById("gallery");
-            const items = gallery.querySelectorAll(".gallery-item");
-            const btn = document.getElementById("verMasBtn");
-
-            // Mostrar solo las primeras 8 imágenes
-            const visibleCount = 8;
-            for (let i = visibleCount; i < items.length; i++) {
-              items[i].style.display = "none";
-            }
-
-            let expanded = false;
-
-            btn.addEventListener("click", () => {
-              expanded = !expanded;
-              if (expanded) {
-                items.forEach(item => (item.style.display = "block"));
-                btn.textContent = "Ver menos";
-              } else {
-                for (let i = visibleCount; i < items.length; i++) {
-                  items[i].style.display = "none";
-                }
-                btn.textContent = "Ver más";
-                window.scrollTo({
-                  top: gallery.offsetTop - 100,
-                  behavior: "smooth",
-                });
-              }
-            });
-          });
-        </script>
+    <!-- CATEGORÍA UÑAS -->
+    <div class="categoria" id="categoria-unas">
+      <h3 class="categoria-titulo">💅 Uñas</h3>
+      <div class="categoria-preview">
+        <figure class="preview-img">
+          <img src="images/Uñas 1.jpg" alt="Uñas" loading="lazy">
+        </figure>
+        <button class="btn btn-primary ver-mas-cat" data-cat="unas">Ver más</button>
       </div>
-    </section>
+      <div class="categoria-grid" id="grid-unas" style="display: none;">
+        <!-- Aquí van todas las imágenes de uñas -->
+        <figure class="gallery-item"><img src="images/Uñas 1.jpg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 2.jpg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 3.jpg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 4.jpg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 5.jpeg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 6.jpeg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 7.jpeg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 8.jpeg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 10.jpeg" alt="Uñas" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Uñas 11.jpeg" alt="Uñas" loading="lazy"></figure>
+        <!-- ... todas las que tengas -->
+      </div>
+    </div>
+
+    <!-- CATEGORÍA CABELLO -->
+    <div class="categoria" id="categoria-cabello">
+      <h3 class="categoria-titulo">💇‍♀️ Cabello</h3>
+      <div class="categoria-preview">
+        <figure class="preview-img">
+          <img src="images/Pelo 1.jpg" alt="Cabello" loading="lazy">
+        </figure>
+        <button class="btn btn-primary ver-mas-cat" data-cat="cabello">Ver más</button>
+      </div>
+      <div class="categoria-grid" id="grid-cabello" style="display: none;">
+        <!-- Todas las imágenes de cabello -->
+        <figure class="gallery-item"><img src="images/Pelo 1.jpg" alt="Cabello" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Pelo 2.jpg" alt="Cabello" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Pelo 3.jpg" alt="Cabello" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Pelo 5.jpg" alt="Cabello" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Pelo 6.jpeg" alt="Cabello" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/Pelo 7.jpeg" alt="Cabello" loading="lazy"></figure>
+        <!-- ... -->
+      </div>
+    </div>
+
+    <!-- CATEGORÍA MASAJES (si no tienes fotos, usa placeholders) -->
+    <div class="categoria" id="categoria-masajes">
+      <h3 class="categoria-titulo">💆‍♀️ Masajes</h3>
+      <div class="categoria-preview">
+        <figure class="preview-img">
+          <img src="images/masajes-placeholder.jpg" alt="Masajes" loading="lazy">
+        </figure>
+        <button class="btn btn-primary ver-mas-cat" data-cat="masajes">Ver más</button>
+      </div>
+      <div class="categoria-grid" id="grid-masajes" style="display: none;">
+        <!-- Puedes poner imágenes relacionadas o repetir algunas -->
+        <figure class="gallery-item"><img src="images/masaje1.jpg" alt="Masaje" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="images/masaje2.jpg" alt="Masaje" loading="lazy"></figure>
+        <!-- Si no tienes, comenta o usa imágenes de spa -->
+      </div>
+    </div>
+
+    <!-- CATEGORÍA PESTAÑAS Y CEJAS -->
+    <div class="categoria" id="categoria-pestanas">
+      <h3 class="categoria-titulo">👁️ Pestañas y Cejas</h3>
+      <div class="categoria-preview">
+        <figure class="preview-img">
+          <img src="images/pestanas-placeholder.jpg" alt="Pestañas" loading="lazy">
+        </figure>
+        <button class="btn btn-primary ver-mas-cat" data-cat="pestanas">Ver más</button>
+      </div>
+      <div class="categoria-grid" id="grid-pestanas" style="display: none;">
+        <!-- Imágenes de pestañas/cejas si tienes -->
+        <figure class="gallery-item"><img src="images/pestanas1.jpg" alt="Pestañas" loading="lazy"></figure>
+        <!-- ... -->
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section section-alt">
@@ -291,6 +297,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
