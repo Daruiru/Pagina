@@ -243,5 +243,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// ===== GALERÍA POR CATEGORÍAS =====
+const botonesCategoria = document.querySelectorAll('.ver-mas-cat');
+
+botonesCategoria.forEach(boton => {
+  boton.addEventListener('click', function() {
+    const categoria = this.dataset.cat; // 'unas', 'cabello', etc.
+    const grid = document.getElementById(`grid-${categoria}`);
+    const preview = this.closest('.categoria-preview');
+    
+    if (grid.style.display === 'none' || grid.style.display === '') {
+      // Mostrar grid
+      grid.style.display = 'grid';
+      this.textContent = 'Ver menos';
+      // Opcional: ocultar la preview o cambiarla
+      // preview.style.display = 'none';
+    } else {
+      // Ocultar grid
+      grid.style.display = 'none';
+      this.textContent = 'Ver más';
+      // preview.style.display = 'flex';
+    }
+  });
+});
 
 
